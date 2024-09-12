@@ -59,10 +59,10 @@ const handleClick = () => {
       },
     },
     pause() {
-      gsapInsance?.pause();
+      gsapInsance && (gsapInsance as any).pause();
     },
     resume() {
-      gsapInsance?.resume();
+      gsapInsance && (gsapInsance as any).resume();
     },
   };
   emit("clickStar", data);
