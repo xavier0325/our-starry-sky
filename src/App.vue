@@ -18,13 +18,14 @@
     btn-text="嗯呐"
     >⭐准备好了嘛⭐</StarDialog
   >
-  <audio ref="audioRef" src="/bg-music.ogg" loop autoplay></audio>
+  <audio ref="audioRef" :src="bgMusicSrc" loop autoplay></audio>
 </template>
 
 <script lang="ts" setup>
 import { ref, shallowRef, watch } from "vue";
 import StarsScene from "@/views/StarsScene.vue";
 import StarDialog from "@/components/StarDialog.vue";
+import bgMusicSrc from "@/assets/bg-music.ogg";
 
 const visible = ref(true);
 const audioRef = shallowRef();
